@@ -1,22 +1,4 @@
-// Copyright 2022 Google LLC
-//
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-//
-//     https://www.apache.org/licenses/LICENSE-2.0
-//
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
 
-const article = document.querySelector('article');
-
-// `document.querySelector` may return null if the selector doesn't match anything.
-if (article) {
-  const text = article.textContent;
   /**
    * Regular expression to find all "words" in a string.
    *
@@ -27,21 +9,10 @@ if (article) {
    *
    * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions
    */
-  const wordMatchRegExp = /[^\s]+/g;
-  const words = text.matchAll(wordMatchRegExp);
-  // matchAll returns an iterator, convert to array to get word count
-  const wordCount = [...words].length;
-  const readingTime = Math.round(wordCount / 200);
-  const badge = document.createElement('p');
+  const catImage = document.createElement('img');
   // Use the same styling as the publish information in an article's header
-  badge.classList.add('color-secondary-text', 'type--caption');
-  badge.textContent = `⏱️ ${readingTime} min read`;
+  catImage.setAttribute('src', 'https://i.pinimg.com/564x/87/dc/34/87dc3498f492d74f452a96d6091f24a5.jpg');
+  
+  const body = document.querySelector('body');
+  body.appendChild(catImage);
 
-  // Support for API reference docs
-  const heading = article.querySelector('h1');
-  // Support for article docs with date
-  const date = article.querySelector('time')?.parentNode;
-
-  // https://developer.mozilla.org/en-US/docs/Web/API/Element/insertAdjacentElement
-  (date ?? heading).insertAdjacentElement('afterend', badge);
-}
