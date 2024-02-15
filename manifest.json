@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Find the Cat",
+  "name": "Find Mittens",
   "version": "1.0",
-  "description": "A cat will appear on the webpage, click it to find it!",
+  "description": "Mittens appear on the webpage, click her when you find her!",
 
   "icons": {
     "16": "images/icon-16.png",
