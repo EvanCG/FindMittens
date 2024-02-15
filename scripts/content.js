@@ -39,6 +39,7 @@
   alertDiv.style.margin = 'auto';
   alertDiv.style.top = '20%';
   alertDiv.style.left = '50%';
+  alertDiv.style.zIndex = '9000'
   alertDiv.style.transform = 'translate(-50%, -50%)';
   
   // style the close button
