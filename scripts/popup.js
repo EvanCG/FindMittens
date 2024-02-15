@@ -11,12 +11,10 @@ chrome.storage.sync.get(['count']).then((result) => {
 
 
     const counterSecondText = document.createElement('p');
-    counterSecondText.innerText = `times! Nice job!`;
+    counterSecondText.innerText = `time${(currentCount > 1) ? 's' : ''}! Nice job!`;
 
-    document.querySelector('body').appendChild(counterFirstText);
-    document.querySelector('body').appendChild(countSpan);
-    document.querySelector('body').appendChild(counterSecondText);
+    document.querySelector('#popup').appendChild(counterFirstText);
+    document.querySelector('#popup').appendChild(countSpan);
+    document.querySelector('#popup').appendChild(counterSecondText);
   }
 });
-
-// if ther eis a value in current count, create an element with the count, and display it
