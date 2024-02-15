@@ -5,7 +5,7 @@
   catImage.setAttribute('src', 'https://i.imgur.com/Ia9iet9.png');
 
 
-  let widthMax = body.offsetWidth - 20; 
+  let widthMax = body.offsetWidth - 20;
   let heightMax = body.offsetHeight - 20;
 
   let randomWidth = Math.floor(Math.random() * widthMax);
@@ -17,6 +17,7 @@
   catImage.style.top = `${randomHeight}px`;
   catImage.setAttribute('alt', `${randomWidth} and ${randomHeight}`);
   catImage.style.zIndex = '9000'
+  catImage.onclick = () => alert('You found the cat!');
 
   body.appendChild(catImage);
 
