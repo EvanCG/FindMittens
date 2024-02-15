@@ -17,7 +17,7 @@
   catImage.style.top = `${randomHeight}px`;
   catImage.setAttribute('alt', `${randomWidth} and ${randomHeight}`);
   catImage.style.zIndex = '9000'
-  catImage.onclick = () => alert('You found the cat!');
+  catImage.onclick = () => alert('You found Mittens!');
 
   body.appendChild(catImage);
 
